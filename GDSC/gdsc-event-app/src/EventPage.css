@@ -1,0 +1,149 @@
+body {
+    font-family: "Google Sans", sans-serif;
+    font-size: 1rem;
+    color: #637282;
+    overflow-x: hidden;
+    font-weight: normal;
+    letter-spacing: -.3px;
+  }
+  
+
+  .screen-slider__item {
+    pointer-events: none;
+    width: 100%;
+    padding: 15px;
+    background: transparent  ;
+  }
+  .pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  .button { 
+    background: #2F5BE7;
+    color: #FFFFFF;;
+    padding: 10px 22px;
+    font-size: 15px;
+    border-radius: 20px;
+  
+  }  
+
+  .event-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .page-heading {
+    background-color: #f29f05; /* Light Orange */
+    color: white;
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3rem; /* Increased font size */
+    text-transform: uppercase; /* Convert to uppercase */
+  }
+  
+  .page-subheading {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #444; /* Dark gray color */
+    font-size: 1rem; /* Adjusted font size */
+    margin-top: 4px; /* Increased top margin */
+    margin-bottom: 25px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    
+;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #f29f05; /* Light Orange */
+    background-color: #f5f5f5;
+    color: #f29f05; /* Light Orange */
+    transition: background-color 0.2s, color 0.2s;
+    margin: 0 10px;
+  }
+  
+  .tab.active {
+    background-color: #f29f05; /* Light Orange */
+    color: white;
+  }
+  
+  .events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .event {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .event h2 {
+    font-family: 'Montserrat', sans-serif; /* Updated font */
+    color: #f29f05; /* Light Orange */
+  }
+  
+  .event p {
+    font-family: 'Open Sans', sans-serif; /* Updated font */
+    margin: 10px 0;
+  }
+  
+  /* Additional styling for hover effect on event boxes */
+  .event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 15px 25px;
+    border: none; /* Remove the border */
+    background-color: #f29f05; /* Light Orange */
+    color: #333; /* A darker gray color */
+    transition: background-color 0.2s, color 0.2s;
+    margin: 0 20px;
+    border-radius: 15px; /* Add border-radius for rounded shape */
+    font-size:large;
+  }
+  
+  .tab.active {
+    background-color: #f5f5f5; /* Background color when active */
+    color: #f29f05; /* Text color when active */
+  }
+  
+  .page-heading {
+    background-color: #f29f05; /* Light Orange */
+    color: white;
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3rem; /* Increased font size */
+    text-transform: uppercase; /* Convert to uppercase */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 25px; /* Add margin at the bottom for spacing */
+    text-align: center; /* Center text horizontally */
+  }
+  

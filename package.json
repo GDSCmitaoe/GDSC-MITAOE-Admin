@@ -1,0 +1,27 @@
+{
+  "name": "gdsc-backend",
+  "version": "1.0.0",
+  "description": "Backend of GDSC MITAOE ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "startDev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayush Nandanwar (Tech Team GDSC 2022)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.19"
+  }
+}
