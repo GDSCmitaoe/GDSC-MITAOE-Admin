@@ -1,5 +1,5 @@
-const exrpess = require('express');
-const router = exrpess.Router();
+const express = require('express');
+const router = express.Router();
 const auth = require('../middlewares/auth')
 const teamController = require('../controllers/teamController')
 // /api/team

@@ -12,7 +12,8 @@ const EventSchema = mongoose.Schema({
     venu:String,
     start_time:String,
     end_time:String,
-    link:String
+    link:String,
+    eventId: String
 })
 
 const Event = mongoose.model("Event",EventSchema);

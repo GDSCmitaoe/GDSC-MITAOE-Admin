@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 
 const CertificateSchema = mongoose.Schema({
-    title:{
-        type:"String"
-    },
     eventId: String,
-    img:String,
+    certTemp: String,
+    certData: String,
 })
 
-const Event = mongoose.model("Event",EventSchema);
+const Certificate = mongoose.model("Certificate",CertificateSchema);
 
-module.exports = Event;
+module.exports = Certificate;

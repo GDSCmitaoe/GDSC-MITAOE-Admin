@@ -7,6 +7,7 @@ const app = express();
 // Importing Routes
 const teamRouter = require('./routes/teamRouter')
 const eventRouter = require('./routes/eventRouter')
+const certificateRouter = require('./routes/certificateRouter')
 const clientRouter = require("./routes/client")
 const cors = require('cors')   
 app.use(cors({
@@ -37,7 +38,7 @@ app.get('/',(req,res)=>{
 app.use('/',clientRouter)  // admin panel
 app.use('/api/team',teamRouter);
 app.use('/api/event',eventRouter)
-
+app.use('/api/certificate',certificateRouter)
 
 
 app.get('*',(req,res)=>{

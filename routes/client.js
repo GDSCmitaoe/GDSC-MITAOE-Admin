@@ -16,6 +16,6 @@ router.get('/certificates',auth.isAdmin,clientController.getCreateCertificatesPa
 
 router.get('/editTeams',auth.isAdmin,clientController.getEditTeamPage)
 router.get('/editEvents',auth.isAdmin,clientController.getEditEventPage)
-
+router.get('/editCertificates',auth.isAdmin,clientController.getEditCertificatePage)
 
 module.exports = router;
