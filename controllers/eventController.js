@@ -48,7 +48,7 @@ exports.createEvent = async (req, res) => {
                     eventId: req.body.eventId
                 })
 
-                let newEventId = `${Math.round(Math.random() * 1E9)}`;
+                let newEventId = event._id + '-' + `${Math.round(Math.random() * 1E9)}`;
 
                 await Event.updateOne({ _id: event._id }, { eventId: newEventId });
 

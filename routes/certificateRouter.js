@@ -8,5 +8,6 @@ router.get('/',certificateController.getCertificates)
 router.post('/create',auth.isAdmin,certificateController.createCertificate);
 router.post('/update/:id',auth.isAdmin,certificateController.updateCertificate);
 router.post('/delete/:id',auth.isAdmin,certificateController.deleteCertificate);
+router.post('/generate',auth.isAdmin,certificateController.generateCertificatePdf);
 
 module.exports = router;

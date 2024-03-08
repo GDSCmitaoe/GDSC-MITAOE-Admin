@@ -124,3 +124,24 @@ exports.deleteCertificate = async (req, res) => {
     }
 }
 
+exports.generateCertificatePdf = async (req, res) => {
+    const name = req.params.name;
+    const filePath = path.join(__dirname, 'certificate_template.html');
+
+    // Read CSV file and replace placeholders in HTML template
+    fs.createReadStream('user_data.csv')
+        .pipe(csv())
+        .on('data', (row) => {
+            if (row.name === name) {
+                let html = fs.readFileSync(filePath, 'utf8');
+                html = html.replace('{{NAME}}', row.name)
+                    .replace('{{COURSE}}', row.course)
+                    .replace('{{DATE}}', row.date);
+
+                res.send(html);
+            }
+        })
+        .on('end', () => {
+            console.log('CSV file successfully processed');
+        });
+}

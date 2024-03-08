@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middlewares/auth')
 const eventController = require('../controllers/eventController')
-// /api/team
 
 router.get('/',eventController.getEvents)
 
