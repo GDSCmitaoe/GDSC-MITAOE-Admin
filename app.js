@@ -9,42 +9,40 @@ const teamRouter = require('./routes/teamRouter')
 const eventRouter = require('./routes/eventRouter')
 const certificateRouter = require('./routes/certificateRouter')
 const clientRouter = require("./routes/client")
-const cors = require('cors')   
+const cors = require('cors')
 app.use(cors({
-    origin: '*' 
+    origin: '*'
 }));
 
- // json parser
- 
+// json parser
+
 // Pug Set up
-app.set('view engine',"ejs"); 
+app.set('view engine', "ejs");
 app.set('views');
 
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
-app.use(express.json()); 
+app.use(express.json());
 app.use(cookieParser());
 
-app.use('public',express.static(__dirname + "/public"))  // serving static files
+app.use('public', express.static(__dirname + "/public"))  // serving static files
 
 app.use(express.static('public'))
 
 // APIs
-app.get('/',(req,res)=>{
-    res.redirect('/login') 
+app.get('/', (req, res) => {
+    res.redirect('/login')
 })
 
-app.use('/',clientRouter)  // admin panel
-app.use('/api/team',teamRouter);
-app.use('/api/event',eventRouter)
-app.use('/api/certificate',certificateRouter)
+app.use('/', clientRouter)  // admin panel
+app.use('/api/team', teamRouter);
+app.use('/api/event', eventRouter)
+app.use('/api/certificate', certificateRouter)
 
 
-app.get('*',(req,res)=>{
+app.get('*', (req, res) => {
     res.send("404 Page not found");
 })
 
 module.exports = app; 
-
-//
